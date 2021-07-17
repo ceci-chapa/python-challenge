@@ -11,6 +11,10 @@ khan_percent = 0
 khan_sum = 0
 correy_sum = 0
 correy_percent = 0
+li_sum = 0
+li_percent = 0
+otooley_sum = 0
+otooley_percent = 0
 
 candidate_list = []
 
@@ -29,6 +33,12 @@ with open(election_csv, encoding='utf-8') as csvfile:
         if row[2] == "Correy":
             correy_sum += 1
 
+        if row[2] == "Li":
+            li_sum += 1
+
+        if row[2] == "O'Tooley":
+            otooley_sum += 1
+
             
         #Summing the votes
         total_votes += 1
@@ -36,3 +46,4 @@ with open(election_csv, encoding='utf-8') as csvfile:
     print(total_votes)
     print(khan_sum)
     print(correy_sum)
+    print(li_sum)
