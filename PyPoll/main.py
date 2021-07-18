@@ -39,7 +39,8 @@ with open(election_csv, encoding='utf-8') as csvfile:
         if row[2] == "O'Tooley":
             otooley_sum += 1
 
-            
+        #add an if statment here for the winner 
+
         #Summing the votes
         total_votes += 1
 
@@ -47,3 +48,4 @@ with open(election_csv, encoding='utf-8') as csvfile:
     print(khan_sum)
     print(correy_sum)
     print(li_sum)
+
