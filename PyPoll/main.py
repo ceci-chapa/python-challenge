@@ -8,14 +8,7 @@ file_to_output = os.path.join("PyPoll", "Resources", "election_results.txt")
 # Variables
 
 total_votes = 0
-#khan_percent = 0
-#khan_sum = 0
-#correy_sum = 0
-#correy_percent = 0
-#li_sum = 0
-#li_percent = 0
-#otooley_sum = 0
-#otooley_percent = 0
+
 
 candidate_name = []
 winner = ""
@@ -41,16 +34,17 @@ with open(election_csv, encoding='utf-8') as csvfile:
         
         can_votes[can_name]= can_votes[can_name]+1
 
-             ###use .get() to get votes for current candidate
+    #Using .get() to get votes for current candidate
     khan_results = can_votes.get("Khan")
     correy_results = can_votes.get("Correy")
     li_results = can_votes.get("Li")
     otooley_results = can_votes.get("O'Tooley")
 
-    khan_cent = round(khan_results / total_votes, 3) * 100
-    correy_cent = round(correy_results / total_votes, 3) * 100
-    li_cent = round(li_results / total_votes, 3) * 100
-    otooley_cent = round(otooley_results / total_votes, 3) * 100
+    #Getting the percentages
+    khan_cent = "{:.3f}%".format(khan_results / total_votes * 100)
+    correy_cent = "{:.3f}%".format(correy_results / total_votes * 100)
+    li_cent = "{:.3f}%".format(li_results / total_votes * 100)
+    otooley_cent = "{:.3f}%".format(otooley_results / total_votes * 100)
    
 
 with open(file_to_output, "w") as txt_file:
@@ -62,7 +56,10 @@ with open(file_to_output, "w") as txt_file:
       f"Khan: {khan_cent} ({khan_results})\n"
       f"Khan: {correy_cent} ({correy_results})\n"
       f"Li: {li_cent} ({li_results})\n"
-      f"O'Tooley: {otooley_cent} ({otooley_results})\n")
+      f"O'Tooley: {otooley_cent} ({otooley_results})\n"
+      f"-------------------------\n"
+      f"Winner: \n"
+      f"-------------------------\n")
 
     print(election_results, end="")
     txt_file.write(election_results)
