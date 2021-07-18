@@ -34,6 +34,17 @@ with open(election_csv, encoding='utf-8') as csvfile:
         
         can_votes[can_name]= can_votes[can_name]+1
 
+    #For loop to pull the winner
+    
+    for can_name in can_votes:
+        if can_name > can_name:
+            winner = can_votes.get("")
+    print(winner)        
+    #print(can_votes)
+    #print(can_name)    
+
+
+
     #Using .get() to get votes for current candidate
     khan_results = can_votes.get("Khan")
     correy_results = can_votes.get("Correy")
@@ -63,6 +74,9 @@ with open(file_to_output, "w") as txt_file:
 
     print(election_results, end="")
     txt_file.write(election_results)
+
+
+
 
     ## loop over can_votes
     
