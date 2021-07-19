@@ -48,12 +48,11 @@ with open(file_to_output, "w") as txt_file:
       f"\n\nFinancial Analysis\n"
       f"-------------------------\n"
       f"Total Months: {total_months}\n"
-      f"Total: {total}\n"
-      f"Average Change: {average_change}\n"
-      f"Greatest Increase: {greatest_increase[0, 1]}\n" 
-      f"Greatest Decrease: {greatest_decrease[0]}\n"
-      
-      f"-------------------------\n")
+      f"Total: ${total}\n"
+      f"Average Change: ${average_change}\n"
+      f"Greatest Increase: {greatest_increase[0]} " f"(${greatest_increase[1]})\n"  
+      f"Greatest Decrease: {greatest_decrease[0]} " f"(${greatest_decrease[1]})\n"
+      )
 
     print(financial_anlysis, end="")
     txt_file.write(financial_anlysis)
