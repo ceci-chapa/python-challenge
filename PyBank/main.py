@@ -15,13 +15,18 @@ greatest_increase = ["", 0]
 greatest_decrease = ["",0]
 
 
+
+
 with open(budget_csv, encoding='utf-8') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     # Skip the header
     header = next(csv_reader)
-    print(header)
-    row_skip = next(csv_reader)
-    print(row_skip)
+    first_row = next(csv_reader)
+
+    total_months += 1
+    total += int(first_row[1])
+    previous_profit = int(first_row[1])
+
     for row in csv_reader:
         net_change = int(row[1]) - previous_profit
         previous_profit = int(row[1])
