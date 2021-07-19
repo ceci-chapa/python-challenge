@@ -19,6 +19,9 @@ with open(budget_csv, encoding='utf-8') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     # Skip the header
     header = next(csv_reader)
+    print(header)
+    row_skip = next(csv_reader)
+    print(row_skip)
     for row in csv_reader:
         net_change = int(row[1]) - previous_profit
         previous_profit = int(row[1])
@@ -41,7 +44,7 @@ with open(budget_csv, encoding='utf-8') as csvfile:
         #Calculating the average change
         average_change_list.append(net_change)
 
-    average_change = round(sum(average_change_list) / (len(average_change_list)),2)
+        average_change = round(sum(average_change_list) / (len(average_change_list)),2)
 
 with open(file_to_output, "w") as txt_file:
     financial_anlysis = (
