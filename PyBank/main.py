@@ -47,14 +47,12 @@ with open(file_to_output, "w") as txt_file:
     financial_anlysis = (
       f"\n\nFinancial Analysis\n"
       f"-------------------------\n"
-      f"Total Votes: {total_votes}\n"
-      f"-------------------------\n"
-      f"Khan: {khan_cent} ({khan_results})\n"
-      f"Khan: {correy_cent} ({correy_results})\n"
-      f"Li: {li_cent} ({li_results})\n"
-      f"O'Tooley: {otooley_cent} ({otooley_results})\n"
-      f"-------------------------\n"
-      f"Winner: \n"
+      f"Total Months: {total_months}\n"
+      f"Total: {total}\n"
+      f"Average Change: {average_change}\n"
+      f"Greatest Increase: {greatest_increase[0, 1]}\n" 
+      f"Greatest Decrease: {greatest_decrease[0]}\n"
+      
       f"-------------------------\n")
 
     print(financial_anlysis, end="")

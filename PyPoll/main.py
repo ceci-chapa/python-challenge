@@ -35,15 +35,14 @@ with open(election_csv, encoding='utf-8') as csvfile:
         can_votes[can_name]= can_votes[can_name]+1
 
     #For loop to pull the winner
-    
-    for can_name in can_votes:
-        if can_name > can_name:
-            winner = can_votes.get("")
-    print(winner)        
-    #print(can_votes)
-    #print(can_name)    
+    #Using winner_vote to set the variable to 0 to check the max as it loops
 
+    winner_vote = 0
+    for name, votes in can_votes.items():
 
+        if votes > winner_vote:
+            winner_vote = votes
+            winner = name  
 
     #Using .get() to get votes for current candidate
     khan_results = can_votes.get("Khan")
@@ -69,23 +68,11 @@ with open(file_to_output, "w") as txt_file:
       f"Li: {li_cent} ({li_results})\n"
       f"O'Tooley: {otooley_cent} ({otooley_results})\n"
       f"-------------------------\n"
-      f"Winner: \n"
+      f"Winner: {winner}\n"
       f"-------------------------\n")
 
     print(election_results, end="")
     txt_file.write(election_results)
 
 
-
-
-    ## loop over can_votes
-    
-     ###use .get() to get votes for current candidate
-    #khan_results = can_votes.get("Khan")
-
-    #khan_cent = round(khan_results / total_votes, 3) * 100
-    #print(f'Khan: {khan_cent} {khan_results}')
-
-
-    #### calculate percentage here   
 
