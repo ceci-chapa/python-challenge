@@ -1,8 +1,8 @@
 import os
 import csv
 
-budget_csv = os.path.join("PyBank", "Resources", "budget_data.csv")
-file_to_output = os.path.join("PyBank", "Resources", "financial_analysis.txt")
+budget_csv = os.path.join("Resources", "budget_data.csv")
+file_to_output = os.path.join("Resources", "financial_analysis.txt")
 
 # Variables
 
@@ -13,8 +13,6 @@ average_change_list = []
 previous_profit = 0
 greatest_increase = ["", 0]
 greatest_decrease = ["",0]
-
-
 
 
 with open(budget_csv, encoding='utf-8') as csvfile:

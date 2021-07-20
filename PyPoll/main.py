@@ -2,8 +2,8 @@ import os
 import csv
 from typing import TYPE_CHECKING
 
-election_csv = os.path.join("PyPoll", "Resources", "election_data.csv")
-file_to_output = os.path.join("PyPoll", "Resources", "election_results.txt")
+election_csv = os.path.join("Resources", "election_data.csv")
+file_to_output = os.path.join("Resources", "election_results.txt")
 
 # Variables
 
