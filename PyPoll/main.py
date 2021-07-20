@@ -56,7 +56,7 @@ with open(election_csv, encoding='utf-8') as csvfile:
     li_cent = "{:.3f}%".format(li_results / total_votes * 100)
     otooley_cent = "{:.3f}%".format(otooley_results / total_votes * 100)
    
-
+#Exporting the textfile
 with open(file_to_output, "w") as txt_file:
     election_results = (
       f"\n\nElection Results\n"

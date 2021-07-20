@@ -19,8 +19,10 @@ with open(budget_csv, encoding='utf-8') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     # Skip the header
     header = next(csv_reader)
+    #This first_row will help the loop start on the correct row to being calculations
     first_row = next(csv_reader)
 
+    #Amounts need to be calculated before the loop to get the correct totals
     total_months += 1
     total += int(first_row[1])
     previous_profit = int(first_row[1])
@@ -49,6 +51,7 @@ with open(budget_csv, encoding='utf-8') as csvfile:
 
         average_change = round(sum(average_change_list) / (len(average_change_list)),2)
 
+#Exporting the text files
 with open(file_to_output, "w") as txt_file:
     financial_anlysis = (
       f"\n\nFinancial Analysis\n"
