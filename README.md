@@ -7,5 +7,9 @@ This repository contains two separate analyses, one from the financial records o
 ### PyBank
 The PyBank folder will contain a python file titled main.py and will also include a Resources folder where the budget_data.csv file and financial_analysis.txt file is located. Below is a screenshot of the financial analysis.
 
+![financial-analysis-text](images/financial-analysis.png)
+
 ### PyPll
 The PyPoll folder is structured in the same way as PyBank which will also contain a python file titled main.py and will also include a Resources folder with the election_data.csv file and election_results.txt file. Below is a screenshot of the election results.
+
+![election-results-text](images/election-results.png)

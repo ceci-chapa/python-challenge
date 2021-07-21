@@ -17,7 +17,7 @@ can_percent = 0
 
 
 
-
+#Reading the csv file
 with open(election_csv, encoding='utf-8') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     # Skip the header

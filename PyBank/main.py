@@ -15,6 +15,7 @@ greatest_increase = ["", 0]
 greatest_decrease = ["",0]
 
 
+#Reading the csv file
 with open(budget_csv, encoding='utf-8') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     # Skip the header
