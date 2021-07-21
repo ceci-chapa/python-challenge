@@ -64,7 +64,7 @@ with open(file_to_output, "w") as txt_file:
       f"Total Votes: {total_votes}\n"
       f"-------------------------\n"
       f"Khan: {khan_cent} ({khan_results})\n"
-      f"Khan: {correy_cent} ({correy_results})\n"
+      f"Correy: {correy_cent} ({correy_results})\n"
       f"Li: {li_cent} ({li_results})\n"
       f"O'Tooley: {otooley_cent} ({otooley_results})\n"
       f"-------------------------\n"
